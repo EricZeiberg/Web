@@ -1,0 +1,41 @@
+.topbreak {
+border: 5px solid #FFF;
+width: 770px;
+border-radius: 8px;
+-moz-border-radius: 10px;
+-webkit-border-radius: 10px;
+margin: 20px auto 10px;
+}
+
+.break {
+border: 2px solid #808080;
+width: 770px;
+border-radius: 8px;
+-moz-border-radius: 10px;
+-webkit-border-radius: 10px;
+margin: 30px auto 10px;
+}
+
+.thinType {
+	color: #FFFFFF;
+	font-weight: 100;
+}
+
+.link {
+	font-size: 20px !important;
+	text-decoration: none !important;
+	color: #ddd !important;
+}
+
+.center {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.footer {
+float: left;
+list-style: none;
+width: 250px;
+margin-left: 20%;
+margin-top: 10px;
+}
