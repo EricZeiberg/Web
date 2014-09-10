@@ -12,7 +12,7 @@
   <link href="assets/css/style.css" rel="stylesheet">
   <script src="assets/js/java.js"></script>
   <script src="http://code.jquery.com/jquery.js"></script>
-<script language="JavaScript" src="assets/js/bootstrap.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 
 
 <style>
@@ -33,6 +33,11 @@
 
 
 </style>
+<script type="text/javascript">
+    $(document).ready(function () {
+      $("[rel=tooltip]").tooltip();
+    });
+    </script>
 </head>
 <body>
   <div class="center">
@@ -44,15 +49,36 @@
      </div>
     <div id="main" style="margin-top: 40px; display: block">
       <ul>
-   <li> <a href="http://twitter.com/EricZeiberg"><div  style="margin-right: 15px; font-size: 8em; color: white"> <i id="twitter" class="fa fa-twitter"></i> </div></a></li>
-    <li><a href="http://ask.fm/EricZeiberg"><div  style="margin-right: 15px; font-size: 8em; color: white"> <i id="twitter" class="fa fa-question-circle"></i> </div></a></li>
-    <li><a href="http://instagram.com/EricZeiberg"><div  style="margin-right: 15px; font-size: 8em; color: white"> <i id="twitter" class="fa fa-instagram"></i> </div></a></li>
-    <li><a href="http://github.com/MasterEjay"><div  style="margin-right: 15px; font-size: 8em; color: white"> <i id="twitter" class="fa fa-github"></i> </div></a></li>
+   <li> <a href="http://twitter.com/EricZeiberg"><div  style="margin-right: 15px; font-size: 8em; color: white"> <i data-toggle="tooltip" data-placement="top" rel="tooltip" title="Twitter" id="twitter" class="fa fa-twitter"></i> </div></a></li>
+    <li><a href="http://ask.fm/EricZeiberg"><div  style="margin-right: 15px; font-size: 8em; color: white"> <i data-toggle="tooltip" data-placement="top" rel="tooltip" title="Askfm"  id="twitter" class="fa fa-question-circle"></i> </div></a></li>
+    <li><a href="http://instagram.com/EricZeiberg"><div  style="margin-right: 15px; font-size: 8em; color: white"> <i data-toggle="tooltip" data-placement="top" rel="tooltip" title="Instagram"  id="twitter" class="fa fa-instagram"></i> </div></a></li>
+    <li><a href="http://github.com/MasterEjay"><div  style="margin-right: 15px; font-size: 8em; color: white"> <i data-toggle="tooltip" data-placement="top" rel="tooltip" title="GitHub" id="twitter" class="fa fa-github"></i> </div></a></li>
   </ul>
   </div>
     </div>
+     <div class="container">
+       <div class='break'>
+     </div>
+    <button style="margin-top: 10px;" class="btn btn-success btn-xlarge button" data-toggle="modal" data-target="#myModal">About me</button>
     <center>
 </center>
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only"></span></button>
+        <h4 class="modal-title" id="myModalLabel">About me</h4>
+      </div>
+      <div class="modal-body">
+        <p>Hello, my name is Eric Zeiberg and I am 14 years old. I love computer science and am the creator of a product called HandySpeech, which you can learn more about <a href="http://ispeak4u.com">here</a>. I also love watching movies, and playing the piano in my free time. I also run cross country and bike, when the weather's nice. That's about it, see yah! </p>
+      </div>
+      <div class="modal-footer">
+
+      </div>
+    </div>
+  </div>
+</div>
 
 
 
