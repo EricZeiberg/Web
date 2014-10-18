@@ -34,10 +34,30 @@ margin: 30px auto 10px;
 	font-weight: 100;
 }
 
+.noLink {
+    color: #FFFFFF;
+    text-color: #FFFFFF;
+    text-decoration: none;
+
+}
+
+.noLink:hover {
+    color: #FFFFFF;
+   text-decoration:none;
+}
+
 .link {
 	font-size: 20px !important;
 	text-decoration: none !important;
 	color: #ddd !important;
+}
+
+.red {
+    color: #FE2E2E;
+}
+
+.white {
+    color: #FFFFFF;
 }
 
 .center {
