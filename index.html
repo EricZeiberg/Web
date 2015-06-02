@@ -36,34 +36,20 @@
       $("[rel=tooltip]").tooltip();
     });
     </script>
+
 </head>
 <body>
+
   <div class="center">
-    <div style="margin-top: 45px; font-size:65px; color: #FFFFFF; font-weight: 100">Welcome to Eric's website</div>
-    <center>
-      <div id="main"> 
-      <ul>
-      <li><a href="http://blog.ericzeiberg.com"><div  style="margin-top: 10px; font-size: 8em; color: white"> <i data-toggle="tooltip" data-placement="left" rel="tooltip" title="My Blog" id="twitter" class="fa fa-pencil"></i> </div></a></li>
-      <li> <a href="xc.html"><div style="font-size: 8em; color: white"> <i style="padding-left: 10px" data-toggle="tooltip" data-placement="right" rel="tooltip" title="Cross Country Info" id="twitter" class="fa fa-trophy"></i></div></a></li>
-    </ul>
-  </div>
-      <div class="container">
-       <div class='break'>
+    <div style="margin-top: 45px; padding-bottom: 600px; font-size:65px; color: #FFFFFF; font-weight: 100">Hi, I'm Eric.</div>
+     <li> <a href="http://twitter.com/EricZeiberg"><div style="left: 100%" class="icon"> <i data-toggle="tooltip" data-placement="top" rel="tooltip" title="Twitter" id="twitter" class="fa fa-twitter"></i> </div></a></li>
+    <li><a href="http://ask.fm/EricZeiberg"><div style="left: 100%" class="icon"> <i data-toggle="tooltip" data-placement="top" rel="tooltip" title="Askfm"  id="twitter" class="fa fa-question-circle"></i> </div></a></li>
+    <li><a href="http://instagram.com/EricZeiberg"><div class="icon"> <i data-toggle="tooltip" data-placement="top" rel="tooltip" title="Instagram"  id="twitter" class="fa fa-instagram"></i> </div></a></li>
+    <li><a href="http://github.com/MasterEjay"><div class="icon"> <i data-toggle="tooltip" data-placement="top" rel="tooltip" title="GitHub" id="twitter" class="fa fa-github"></i> </div></a></li>
+    <li><a href="http://youtube.com/ejzeiberg"><div style="top: 0px" class="icon"> <i data-toggle="tooltip" data-placement="top" rel="tooltip" title="YouTube" id="twitter" class="fa fa-youtube-play"></i> </div></a></li>
+<!-- <li><a href="http://blog.ericzeiberg.com"><div class="icon"> <i data-toggle="tooltip" data-placement="left" rel="tooltip" title="My Blog" id="twitter" class="fa fa-pencil"></i> </div></a></li>
+ -->      <li> <a href="xc.html"><div  style="top: 0px; left: 100%" class="icon"> <i style="padding-left: 10px" data-toggle="tooltip" data-placement="right" rel="tooltip" title="Cross Country Info" id="twitter" class="fa fa-trophy"></i></div></a></li>
      </div>
-    <div id="main" style="margin-top: 40px; display: block">
-      <ul>
-   <li> <a href="http://twitter.com/EricZeiberg"><div  style="margin-right: 15px; font-size: 8em; color: white"> <i data-toggle="tooltip" data-placement="top" rel="tooltip" title="Twitter" id="twitter" class="fa fa-twitter"></i> </div></a></li>
-    <li><a href="http://ask.fm/EricZeiberg"><div  style="margin-right: 15px; font-size: 8em; color: white"> <i data-toggle="tooltip" data-placement="top" rel="tooltip" title="Askfm"  id="twitter" class="fa fa-question-circle"></i> </div></a></li>
-    <li><a href="http://instagram.com/EricZeiberg"><div  style="margin-right: 15px; font-size: 8em; color: white"> <i data-toggle="tooltip" data-placement="top" rel="tooltip" title="Instagram"  id="twitter" class="fa fa-instagram"></i> </div></a></li>
-    <li><a href="http://github.com/MasterEjay"><div  style="margin-right: 15px; font-size: 8em; color: white"> <i data-toggle="tooltip" data-placement="top" rel="tooltip" title="GitHub" id="twitter" class="fa fa-github"></i> </div></a></li>
-    <li><a href="http://youtube.com/ejzeiberg"><div  style="margin-right: 15px; font-size: 8em; color: white"> <i data-toggle="tooltip" data-placement="top" rel="tooltip" title="YouTube" id="twitter" class="fa fa-youtube-play"></i> </div></a></li>
-  </ul>
-  </div>
-    </div>
-     <div class="container">
-       <div class='break'>
-     </div>
-    <button style="margin-top: 10px;" class="btn btn-success btn-xlarge button" data-toggle="modal" data-target="#myModal">About me</button>
 
 
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -85,4 +71,21 @@
  </div>
 </div>
 </body>
+<script type="text/javascript">
+var radius = 200;
+var fields = $('.icon'), container = $('.center'), width = container.width(), height = container.height();
+var angle = 0, step = (2*Math.PI) / fields.length;
+fields.each(function() {
+    var x = Math.round(width/2 + radius * Math.cos(angle) - $(this).width()/2);
+    var y = Math.round(height/2 + radius * Math.sin(angle) - $(this).height()/2);
+    //if(window.console) {
+        console.log($(this).text(), x, y);
+    //}
+    $(this).animate({
+        left: x + 'px',
+        top: y + 'px'
+    }, 2000);
+    angle += step;
+});
+</script>
 </html>
