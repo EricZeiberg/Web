@@ -1,8 +1,10 @@
+ 
+/* XC Styling*/
  #xc_header {
-      background-color: #f7f6f1;
+      background-color: transparent;
       padding: 20px;
       border-bottom: 1px solid #555;
-      box-shadow: 0px 0px 6px 2px #555;
+      border: solid 1px white;
       margin: 15px;
       border-radius: 5px;
 }
@@ -10,6 +12,19 @@
     margin: 15px;
 }
 
+.panel > .panel-heading {
+    background: #989898;
+}
+
+.panel-body {
+    background: #C0C0C0; 
+}
+
+.list-group-item {
+   background: #D8D8D8;  
+}
+
+/*Home Page Styling*/
 .topbreak {
 border: 5px solid #FFF;
 width: 770px;
