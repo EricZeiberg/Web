@@ -43,8 +43,8 @@
     $(document).ready(function () {
       $("[rel=tooltip]").tooltip();
     });
-    </script>
-      <script>
+</script>
+<script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -80,7 +80,10 @@
             <h3 class="panel-title">Hall Course</h3>
           </div>
           <div class="panel-body">
-           <img src="assets/images/hallCourse.png" style="width:500px; height: 300px;"/>
+          <a href="#" id="pop"> 
+            <img class="img-responsive" id="imageresource" src="assets/images/hallCourse.png" style="width:500px; height: 300px;"/>
+          </a>
+         
           </div>
           <ul class="list-group">
     <li class="list-group-item"><strong>Distance: </strong> 3.1 Mile</li>
@@ -95,7 +98,7 @@
             <h3 class="panel-title">Richmond Course</h3>
           </div>
           <div class="panel-body">
-            <img src="assets/images/richmondCourse.png" style="width:500px; height: 300px;"/>
+            <img class="img-responsive" src="assets/images/richmondCourse.png" style="width:500px; height: 300px;"/>
           </div>
           <ul class="list-group">
     <li class="list-group-item"><strong>Distance: </strong> 2.75 Miles</li>
@@ -110,7 +113,7 @@
             <h3 class="panel-title">Mini Richmond Course</h3>
           </div>
           <div class="panel-body">
-           <img src="assets/images/miniRichmondCourse.png" style="width:500px; height: 300px;"/>
+           <img class="img-responsive" src="assets/images/miniRichmondCourse.png" style="width:500px; height: 300px;"/>
           </div>
           <ul class="list-group">
     <li class="list-group-item"><strong>Distance: </strong> 2.25 Miles</li>
@@ -128,7 +131,7 @@
             <h3 class="panel-title">Beacon Hill Course</h3>
           </div>
           <div class="panel-body">
-           <img src="assets/images/beaconCourse.png" style="width:500px; height: 300px;"/>
+           <img class="img-responsive" src="assets/images/beaconCourse.png" style="width:500px; height: 300px;"/>
           </div>
           <ul class="list-group">
     <li class="list-group-item"><strong>Distance: </strong> 4.34 Mile</li>
@@ -143,7 +146,7 @@
             <h3 class="panel-title">Simsbury Course</h3>
           </div>
           <div class="panel-body">
-           <img src="assets/images/simsburyCourse.png" style="width:500px; height: 300px;"/>
+           <img class="img-responsive" src="assets/images/simsburyCourse.png" style="width:500px; height: 300px;"/>
           </div>
           <ul class="list-group">
     <li class="list-group-item"><strong>Distance: </strong> 4.43 Miles</li>
@@ -159,7 +162,7 @@
             <h3 class="panel-title">Still Ln Course</h3>
           </div>
           <div class="panel-body">
-            <img src="assets/images/stillCourse.png" style="width:500px; height: 300px;"/>
+            <img class="img-responsive" src="assets/images/stillCourse.png" style="width:500px; height: 300px;"/>
           </div>
           <ul class="list-group">
     <li class="list-group-item"><strong>Distance: </strong> 3.82 Miles</li>
@@ -170,5 +173,35 @@
     </div>
 
 </div>
+
+<!-- Creates the bootstrap modal where the image will appear -->
+<div class="modal fade" id="imagemodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="myModalLabel">Image preview</h4>
+      </div>
+      <div class="modal-body" style="width: auto; height: auto;">
+        <img src="" id="imagepreview" >
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<script type="text/javascript">
+$("#pop").on("click", function() {
+   $('#imagepreview').attr('src', $('#imageresource').attr('src')); // here asign the image to the modal when the user click the enlarge link
+   $('#imagemodal').modal('show'); // imagemodal is the id attribute assigned to the bootstrap modal, then i use the show function
+   var image = $('#imagepreview');
+   var constant = 50;
+   var width = image[0].naturalWidth + constant;
+   var height = image[0].naturalHeight + constant;
+   $('#imagemodal').children().first().attr('style', 'width: ' + width + "px; height: " + height + "px;");
+});
+
+</script>
 </body>
 </html>

@@ -19,7 +19,9 @@
 .panel-body {
     background: #C0C0C0; 
 }
-
+.modal-dialog { 
+max-width : 100% ;
+}
 
 /*Home Page Styling*/
 .icon {
